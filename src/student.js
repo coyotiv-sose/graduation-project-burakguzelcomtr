@@ -4,15 +4,15 @@ class Student {
     this.surname = surname
     this.grade = grade
     this.level = level
-    this.classroom = null
+    this.classGroup = null
   }
 
-  joinClassroom(classroom) {
-    if (classroom.grade !== this.grade && classroom.level !== this.level) {
+  joinClass(classGroup) {
+    if (classGroup.grade !== this.grade && classGroup.level !== this.level) {
       throw new Error('No matching classroom found')
     }
-    classroom.students.push(this)
-    this.classroom = classroom
+    classGroup.students.push(this)
+    this.classGroup = classGroup
   }
 }
 

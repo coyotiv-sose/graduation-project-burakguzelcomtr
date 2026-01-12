@@ -1,4 +1,4 @@
-class Classroom {
+class ClassGroup {
   students = []
 
   teacher = null
@@ -6,10 +6,6 @@ class Classroom {
   constructor(grade, level) {
     this.grade = grade
     this.level = level
-  }
-
-  matches(person) {
-    return person.grade === this.grade && person.level === this.level
   }
 
   get details() {
@@ -29,4 +25,4 @@ class Classroom {
   }
 }
 
-module.exports = Classroom
+module.exports = ClassGroup
