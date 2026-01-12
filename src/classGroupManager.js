@@ -6,11 +6,17 @@ class ClassGroupManager {
   }
 
   addStudentToClassGroup(student, classGroup) {
-    student.joinClass(classGroup)
+    if (classGroup.grade !== student.grade && classGroup.level !== student.level) {
+      throw new Error('No matching classroom found')
+    }
+    classGroup.students.push(student)
   }
 
   assignTeacherToClassGroup(teacher, classGroup) {
-    teacher.joinClass(classGroup)
+    if (classGroup.grade !== teacher.grade && classGroup.level !== teacher.level) {
+      throw new Error('No matching classroom found')
+    }
+    classGroup.teacher = teacher
   }
 }
 

@@ -19,7 +19,16 @@ class ClassGroup {
         ${this.students.map(student => student.name + ' ' + student.surname).join(', ')}
         `
   }
-
+  listStudentsByTeacher(teacher) {
+    if (!this.teacher) {
+      return 'No teacher assigned to this class group.'
+    }
+    
+    if (this.teacher !== teacher) {
+      throw new Error('Only the assigned teacher can view the students.')
+    }
+    return this.students.map(student => student.name + ' ' + student.surname).join(', ')
+  }
   set details(_) {
     throw new Error('You cannot edit classroom details directly.')
   }

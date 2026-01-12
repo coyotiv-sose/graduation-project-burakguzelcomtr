@@ -8,7 +8,7 @@ const classGroup4B = classGroupManager.createClassGroup(4, 'B')
 
 const Burak = new Student('Burak', 'Guzel', 3, 'A')
 const WhoAmI = new Student('WhoAmI', 'Unknown', 3, 'A')
-const MrX = new Teacher('Mr', 'X', 3, 'A')
+const MrX = new Teacher('Mr', 'X', 3, 'A', classGroup3A)
 const MrsY = new Teacher('Mrs', 'Y', 4, 'B')
 const StudentZ = new Student('Student', 'Z', 4, 'B')
 
@@ -20,3 +20,4 @@ classGroupManager.assignTeacherToClassGroup(MrsY, classGroup4B)
 
 console.log(classGroup3A.details)
 console.log(classGroup4B.details)
+console.log('Students of Mr. X:', classGroup3A.listStudentsByTeacher(MrX))
