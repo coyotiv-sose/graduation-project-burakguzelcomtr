@@ -1,18 +1,9 @@
 class Teacher {
-  constructor(name, surname, grade, level) {
+  constructor(name, surname, grade, section) {
     this.name = name
     this.surname = surname
     this.grade = grade
-    this.level = level
-    this.classGroup = null
-  }
-
-  joinClass(classGroup) {
-    if (classGroup.grade !== this.grade && classGroup.level !== this.level) {
-      throw new Error('No matching classroom found')
-    }
-    classGroup.teacher = this
-    this.classGroup = classGroup
+    this.section = section 
   }
 }
 
