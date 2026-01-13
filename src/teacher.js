@@ -1,10 +1,9 @@
 class Teacher {
-  constructor(name, surname, grade, level) {
+  constructor(name, surname, grade, section) {
     this.name = name
     this.surname = surname
     this.grade = grade
-    this.level = level
-    this.classGroup = this.classGroup || null
+    this.section = section 
   }
 }
 
