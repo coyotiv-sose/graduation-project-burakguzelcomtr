@@ -4,6 +4,7 @@ class Quiz {
     this.title = title
     this.questions = []
   }
+  
 }
 
 module.exports = Quiz
